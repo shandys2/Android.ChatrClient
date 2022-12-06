@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.clienteandroidchat.Models.Mensaje;
-import com.example.clienteandroidchat.placeholder.PlaceholderContent;
+
 
 import java.util.ArrayList;
 import java.util.List;

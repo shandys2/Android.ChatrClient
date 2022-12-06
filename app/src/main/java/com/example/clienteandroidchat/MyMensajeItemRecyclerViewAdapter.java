@@ -8,15 +8,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.clienteandroidchat.Models.Mensaje;
-import com.example.clienteandroidchat.placeholder.PlaceholderContent.PlaceholderItem;
+
 import com.example.clienteandroidchat.databinding.FragmentItemBinding;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class MyMensajeItemRecyclerViewAdapter extends RecyclerView.Adapter<MyMensajeItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<Mensaje> mValues;

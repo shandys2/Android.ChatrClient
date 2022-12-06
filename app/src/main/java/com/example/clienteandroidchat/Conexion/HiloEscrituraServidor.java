@@ -4,29 +4,30 @@ package com.example.clienteandroidchat.Conexion;
 import android.util.Log;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.Date;
 
 
-public class HiloEscuchaServidor extends Thread{
+public class HiloEscrituraServidor extends Thread{
 
-    public BufferedReader bufferedReader;
+    public BufferedWriter bufferedWriter;
+    String mensaje;
 
-    String[]conectados;
-
-    public HiloEscuchaServidor(BufferedReader bf){
-        this.bufferedReader=bf;
+    public HiloEscrituraServidor(BufferedWriter bw,String msg){
+        this.bufferedWriter=bw;
+        this.mensaje=msg;
     }
 
     @Override
     public void run(){
-
-        String res;
         try {
-            while ((res=bufferedReader.readLine())!=null){
-                Log.i("MENSAJE", res);
-            }
-        }catch (Exception e){
+            bufferedWriter.write(mensaje);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
 
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
